@@ -6,4 +6,6 @@
     <string name="remember_me">Recordarme</string>
     <string name="sign_in">Inicio de sesión</string>
     <string name="sign_up"><u>Iniciar sesión</u></string>
+    <string name="login_with_facebook">Iniciar con Facebook</string>
+    <string name="login_with_google">Iniciar con Google</string>
 </resources>

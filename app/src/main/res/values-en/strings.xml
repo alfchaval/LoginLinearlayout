@@ -6,4 +6,6 @@
     <string name="remember_me">Remember me</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up"><u>Sign Up</u></string>
+    <string name="login_with_facebook">Login with Facebook</string>
+    <string name="login_with_google">Login with Google</string>
 </resources>

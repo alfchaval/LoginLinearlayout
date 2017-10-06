@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/txv_sign_in_margin"
         android:text="@string/sign_in"
-        android:textAppearance="@android:style/TextAppearance.Holo.Medium.Inverse"
+        android:textAppearance="@style/LoginTitle"
         />
 
     <TextView
@@ -23,8 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name_or_email"
-        android:textColor="@android:color/white"
-        android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
+        android:textAppearance="@style/LoginTheme"
         />
 
     <EditText
@@ -33,8 +32,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:inputType="text"
-        android:textAppearance="@android:style/TextAppearance.Holo.Large"
+        android:padding="@dimen/editext_padding"
+        android:textAppearance="@style/Widget.Editext"
         android:layout_marginBottom="@dimen/txv_user_margin"
+        android:textAlignment="center"/>
         />
 
     <TextView
@@ -42,8 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/password"
-        android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
-        />
+        android:textAppearance="@style/LoginTheme"/>
 
     <EditText
         android:id="@+id/edtPassword"
@@ -51,67 +51,74 @@
         android:layout_height="wrap_content"
         android:background="@drawable/border"
         android:inputType="textPassword"
-        android:textAppearance="@android:style/TextAppearance.Holo.Large"
-
-        />
+        android:padding="@dimen/editext_padding"
+        android:textAppearance="@style/Widget.Editext"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:id="@+id/llSignUpOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/ll_remember_margin">
 
         <CheckBox
             android:id="@+id/chkRemember"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/remember_me"
-            android:checked="true"
             android:layout_weight="1"
-            android:textAppearance="@android:style/TextAppearance.Holo"
+            android:checked="true"
+            android:text="@string/remember_me"
+            android:theme="@style/Widget.CheckBox"
             />
 
         <TextView
             android:id="@+id/txvSignUp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
-            android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/LoginTheme"
             />
 
     </LinearLayout>
-
+    <!--
+    Cuidado al indicar el margen en un estilo y en la etiqueta,
+    porque se redibuja el componente,
+    con lo cuál se carga de trabajo a la GPU
+    -->
     <Button
-        android:layout_gravity="center_horizontal"
+        style="@style/Widget.Button.Transparent"
         android:id="@+id/btnSignUp"
+        android:layout_gravity="center_horizontal"
         android:layout_width="@dimen/sign_in_button_width"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"
         android:background="@color/colorFacebook"
-        android:textAllCaps="false"
-        android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
+        android:textAppearance="@style/LoginTheme"
         android:layout_marginBottom="@dimen/txv_sign_up_margin"
     />
 
     <Button
         android:id="@+id/btnGoogleSignUp"
+        style="@style/Widget.Button.Transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login_with_google"
         android:background="@drawable/google_bar"
-        android:textAllCaps="false"
-        android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
+        android:textAppearance="@style/LoginTheme"
         android:layout_marginBottom="@dimen/txv_google_margin"
         />
 
     <Button
         android:id="@+id/btnFacebookSignUp"
+        style="@style/Widget.Button.Transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login_with_facebook"
         android:background="@drawable/facebook_bar"
-        android:textAllCaps="false"
-        android:textAppearance="@android:style/TextAppearance.Holo.Small.Inverse"
+        android:textAppearance="@style/LoginTheme"
         />
 
 </LinearLayout>
